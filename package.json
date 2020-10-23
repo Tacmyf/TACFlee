@@ -1,0 +1,29 @@
+{
+  "name": "flee",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "author": "Michael Depp",
+  "license": "ISC",
+  "dependencies": {
+    "@chakra-ui/core": "^1.0.0-rc.4",
+    "@chakra-ui/icons": "^1.0.0-next.3",
+    "firebase": "^7.22.0",
+    "hamburger-react": "^2.2.0",
+    "markdown-to-jsx": "^7.0.1",
+    "next": "^9.5.3",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-icons": "^3.11.0",
+    "react-markdown": "^4.3.1",
+    "showdown": "^1.9.1",
+    "styled-components": "^5.2.0",
+    "styled-loaders-react": "^1.1.0",
+    "styled-theming": "^2.2.0"
+  }
+}
