@@ -17,7 +17,7 @@ function Guide(props) {
   const { ans, showAns, createMarkup, conv } = props;
   return (
     <>
-      <Heading>Guidelines For Conducting Youth Bible Study</Heading>
+      <Heading>{props.lang ? "Guidelines For Conducting Youth Bible Study" : "வாலிபர்கள் வேத ஆராய்ச்சியை நடத்துவதற்கான வழிகாட்டுதல்கள்"}</Heading>
       <Box
         my={[6, 8, 10, 12]}
         dangerouslySetInnerHTML={
@@ -45,7 +45,7 @@ function Guide(props) {
               }
         }
       ></Box>
-      <Heading>Conducting The MYF Youth Bible Study</Heading>
+      <Heading>{props.lang ? "Conducting The MYF Youth Bible Study" : "வேத ஆராய்ச்சியை நடத்துவது"}</Heading>
       <Box
         my={[6, 8, 10, 12]}
         dangerouslySetInnerHTML={
