@@ -16,6 +16,8 @@ function Content(props) {
   const sbtn = useColorModeValue("#F8F8F8", "#304FFF");
   const { ans, showAns, createMarkup, conv } = props;
 
+  const pdf = "./" + props.article.slug + ".pdf"
+
   return (
     <>
       {!!props.article.testimonylink && (
@@ -105,7 +107,7 @@ function Content(props) {
               pt={1}
               pb={1}
             >
-              <a href={"./islab.pdf"} download>
+              <a href={pdf} download>
                 <Center>
                   <Text>{props.lang ? "Download All" : "பதிவிறக்கம்"}</Text>
                 </Center>
