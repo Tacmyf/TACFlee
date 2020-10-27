@@ -41,7 +41,6 @@ function Articleempty(props) {
   const conv = (text) => {
     const regex = /\\n|\\r\\n|\\n\\r|\\r/g;
     const converter = new showdown.Converter();
-    console.log(converter.makeHtml(text.replace(regex, "<br>")));
     return converter.makeHtml(text.replace(regex, "<br>"));
   };
 

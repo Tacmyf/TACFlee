@@ -24,7 +24,6 @@ function Article(props) {
 
   const router = useRouter();
   const slug = router.query.lesson;
-  console.log(slug);
 
   const bg = useColorModeValue("#00102A", "#F8F8F8");
   const color = useColorModeValue("#F8F8F8", "#00102A");
@@ -40,8 +39,6 @@ function Article(props) {
   function getLesson() {
     setLoading(true);
     const idx = props.lessons.findIndex(checkLesson);
-    console.log(idx);
-    console.log("fetchingLLLLLLLLLLLLLLLLLLLLLLL");
     setArticle(props.lessons[idx]);
     setLoading(false);
   }

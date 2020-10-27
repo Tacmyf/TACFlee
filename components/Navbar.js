@@ -13,8 +13,6 @@ function Navbar() {
     const btn = "#304FFF"
 
     function opennav() {
-
-        console.log("enterr")
         setMenu(!menu)
     }
 
