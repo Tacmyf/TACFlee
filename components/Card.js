@@ -15,7 +15,7 @@ function Card(props) {
   return (
     <>
       {props.min.map((min, id) => (
-        <Box w={["100%", "100%", "100%", "70%"]} key={id} mb={3}>
+        <Box w={["100%", "100%", "100%", "70%"]} key={id} mb={3} mx="auto">
           <Box display="flex">
             <Box
               bg="#F12A41"

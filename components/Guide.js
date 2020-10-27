@@ -15,9 +15,16 @@ function Guide(props) {
   const btn = "#304FFF";
   const sbtn = useColorModeValue("#F8F8F8", "#304FFF");
   const { ans, showAns, createMarkup, conv } = props;
+
+  const pdf = "./" + props.article.slug + ".pdf"
+
   return (
     <>
-      <Heading>{props.lang ? "Guidelines For Conducting Youth Bible Study" : "வாலிபர்கள் வேத ஆராய்ச்சியை நடத்துவதற்கான வழிகாட்டுதல்கள்"}</Heading>
+      <Heading>
+        {props.lang
+          ? "Guidelines For Conducting Youth Bible Study"
+          : "வாலிபர்கள் வேத ஆராய்ச்சியை நடத்துவதற்கான வழிகாட்டுதல்கள்"}
+      </Heading>
       <Box
         my={[6, 8, 10, 12]}
         dangerouslySetInnerHTML={
@@ -45,7 +52,11 @@ function Guide(props) {
               }
         }
       ></Box>
-      <Heading>{props.lang ? "Conducting The MYF Youth Bible Study" : "வேத ஆராய்ச்சியை நடத்துவது"}</Heading>
+      <Heading>
+        {props.lang
+          ? "Conducting The MYF Youth Bible Study"
+          : "வேத ஆராய்ச்சியை நடத்துவது"}
+      </Heading>
       <Box
         my={[6, 8, 10, 12]}
         dangerouslySetInnerHTML={
@@ -73,6 +84,29 @@ function Guide(props) {
               }
         }
       ></Box>
+      <Center>
+        <Box
+          fontFamily="Poppins"
+          cursor="pointer"
+          fontWeight="semi"
+          fontSize="lg"
+          w={["55%", "35%", "25%", "20%"]}
+          _hover={{ bg: btn }}
+          bg={btn}
+          color="#F8F8F8"
+          size="lg"
+          rounded={25}
+          mt={5}
+          pt={1}
+          pb={1}
+        >
+          <a href={pdf} download>
+            <Center>
+              <Text>{props.lang ? "Download All" : "பதிவிறக்கம்"}</Text>
+            </Center>
+          </a>
+        </Box>
+      </Center>
     </>
   );
 }
