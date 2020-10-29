@@ -1,4 +1,4 @@
-import { Text, Stack, HStack, Box, VStack, Flex, Image, useColorMode, useColorModeValue, IconButton, Center, Container, Wrap } from "@chakra-ui/core"
+import { Box, Flex, Image, useColorMode, useColorModeValue, IconButton, Center, Container, Wrap } from "@chakra-ui/core"
 import { IoMdMoon, IoMdSunny } from "react-icons/io";
 import Link from 'next/link'
 import Hamburger from 'hamburger-react'
@@ -34,6 +34,7 @@ function Navbar() {
                         outline="none"
                         onClick={opennav}
                         icon={<Hamburger
+                        toggled={menu}
                         size={20}
                         ></Hamburger>}
                     ></IconButton>
@@ -61,7 +62,7 @@ function Navbar() {
                     ></IconButton>
                 </Box>
             </Flex>
-            {menu ? <Navscreen></Navscreen> : console.log("menu close")}
+            {menu ? <Navscreen menu={menu} setMenu={setMenu}></Navscreen> : console.log("menu close")}
         </div>
     )
 }
