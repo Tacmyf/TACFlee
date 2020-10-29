@@ -30,24 +30,6 @@ function Lesson(props) {
   const color = useColorModeValue("#F8F8F8", "#00102A");
   const btn = "#304FFF";
   const sbtn = useColorModeValue("#F8F8F8", "#304FFF");
-
-  // function getLesson() {
-  //     setLoading(true)
-  //     ref.get().then((item) => {
-  //         const items = item.docs.map((doc) => doc.data())
-  //         setLessons(items)
-  //         setLoading(false)
-  //     })
-  // }
-
-  // useEffect(() => {
-  //     getLesson()
-  // }, [])
-
-  // if (loading) {
-  //     return <Spinner></Spinner>
-  // }
-
   return (
     <Layout>
       <Center>
@@ -62,6 +44,7 @@ function Lesson(props) {
       </Center>
       <HStack overflowX="scroll" spacing="24px" py={8} mb={12}>
         {props.lessons.map((lesson, id) => (
+          <a href={"article?lesson=" + lesson.slug}>
           <Boximage
             key={id}
             link={lesson.slug}
@@ -69,6 +52,7 @@ function Lesson(props) {
             title={lesson.lessontitle}
             colorval={sbtn}
           ></Boximage>
+          </a>
         ))}
       </HStack>
     </Layout>
