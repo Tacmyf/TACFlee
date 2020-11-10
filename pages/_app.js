@@ -5,7 +5,14 @@ import { theme } from "@chakra-ui/theme"
 import firebase from "../firebase/firebase"
 import { useState, useEffect } from "react"
 import Spinner from "../components/Spinner"
+import ReactGA from 'react-ga';
 import "../styles/style.css"
+
+
+function initializeReactGA() {
+    ReactGA.initialize('G-E93FDQV62E');
+    ReactGA.pageview('/');
+}
 
 const customTheme = {
     ...theme,
