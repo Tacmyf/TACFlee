@@ -7,8 +7,6 @@ import { useState, useEffect } from "react"
 import Spinner from "../components/Spinner"
 import "../styles/style.css"
 
-const analy = firebase.analytics()
-
 const customTheme = {
     ...theme,
     colors: {
@@ -37,7 +35,6 @@ function App({ Component, pageProps }) {
     const [lessons, setLessons] = useState([]);
     const [loading, setLoading] = useState(false);
     const ref = firebase.firestore().collection("lessons")
-    analy.logEvent("load_page")
     function getLesson() {
         setLoading(true)
         ref.get().then((item) => {
