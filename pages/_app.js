@@ -5,14 +5,10 @@ import { theme } from "@chakra-ui/theme"
 import firebase from "../firebase/firebase"
 import { useState, useEffect } from "react"
 import Spinner from "../components/Spinner"
-import ReactGA from 'react-ga';
 import "../styles/style.css"
 
 
-function initializeReactGA() {
-    ReactGA.initialize('G-E93FDQV62E');
-    ReactGA.pageview('/');
-}
+const anly = firebase.analytics()
 
 const customTheme = {
     ...theme,
@@ -42,6 +38,7 @@ function App({ Component, pageProps }) {
     const [lessons, setLessons] = useState([]);
     const [loading, setLoading] = useState(false);
     const ref = firebase.firestore().collection("lessons")
+    anly.logEvent('load_page')
     function getLesson() {
         setLoading(true)
         ref.get().then((item) => {
