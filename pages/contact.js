@@ -65,6 +65,16 @@ function Contact() {
                   >
                     Rev Timothy Raj
                   </Heading>
+                  <Heading
+                    fontSize="xl"
+                    fontWeight="semi"
+                    textAlign={["center", "center", "center", "left"]}
+                    fontSize={["xl", "xl", "2xl", "2xl"]}
+                    mt={2}
+                    color={sbtn}
+                  >
+                    timodinho@yahoo.com
+                  </Heading>
                 </Flex>
                 <Flex display="block">
                   <Heading
@@ -86,6 +96,16 @@ function Contact() {
                     color={sbtn}
                   >
                     Mr. Josiah Inbaraj
+                  </Heading>
+                  <Heading
+                    fontSize="xl"
+                    fontWeight="semi"
+                    textAlign={["center", "center", "center", "left"]}
+                    fontSize={["xl", "xl", "2xl", "2xl"]}
+                    mt={2}
+                    color={sbtn}
+                  >
+                    josiahinbaraj20@gmail.com
                   </Heading>
                 </Flex>
                 <Box>
