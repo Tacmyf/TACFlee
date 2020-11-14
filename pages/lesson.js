@@ -17,7 +17,7 @@ import Layout from "../components/Layout";
 import Boximage from "../components/Boximage";
 // import firebase from "../firebase/firebase"
 import { useState, useEffect } from "react";
-import Footer from "../components/Footer";
+import firebase from "../firebase/firebase";
 
 function Lesson(props) {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -30,6 +30,12 @@ function Lesson(props) {
   const color = useColorModeValue("#F8F8F8", "#00102A");
   const btn = "#304FFF";
   const sbtn = useColorModeValue("#F8F8F8", "#304FFF");
+
+  const lessonClick = (msg) => {
+    console.log("lesson is clicked");
+    firebase.analytics().logEvent(msg);
+  };
+
   return (
     <Layout>
       <Center>
@@ -44,14 +50,17 @@ function Lesson(props) {
       </Center>
       <HStack overflowX="scroll" spacing="24px" py={8} mb={12}>
         {props.lessons.map((lesson, id) => (
-          <a href={"article?lesson=" + lesson.slug}>
-          <Boximage
-            key={id}
-            link={lesson.slug}
-            imageUrl={lesson.coverimg}
-            title={lesson.lessontitle}
-            colorval={sbtn}
-          ></Boximage>
+          <a
+            href={"article?lesson=" + lesson.slug}
+            onClick={lessonClick(lesson.slug + "_is_clicked")}
+          >
+            <Boximage
+              key={id}
+              link={lesson.slug}
+              imageUrl={lesson.coverimg}
+              title={lesson.lessontitle}
+              colorval={sbtn}
+            ></Boximage>
           </a>
         ))}
       </HStack>
