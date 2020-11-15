@@ -17,7 +17,6 @@ import Layout from "../components/Layout";
 import Boximage from "../components/Boximage";
 // import firebase from "../firebase/firebase"
 import { useState, useEffect } from "react";
-import firebase from "../firebase/firebase";
 
 function Lesson(props) {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -33,7 +32,6 @@ function Lesson(props) {
 
   const lessonClick = (msg) => {
     console.log("lesson is clicked");
-    firebase.analytics().logEvent(msg);
   };
 
   return (

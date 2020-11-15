@@ -1,6 +1,5 @@
 import firebase from "firebase/app";
 import "firebase/firestore";
-import "firebase/analytics";
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
@@ -17,9 +16,6 @@ const firebaseConfig = {
 if (!firebase.apps.length) {
   console.log("=================> wokringgg");
   firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-} else {
-  console.log("=================> no logging");
 }
 
 export default firebase;

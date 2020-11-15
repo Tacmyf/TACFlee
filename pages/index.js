@@ -12,7 +12,6 @@ import {
   Flex,
 } from "@chakra-ui/core";
 import Layout from "../components/Layout";
-import firebase from "../firebase/firebase";
 import Link from "next/link";
 
 function Index() {
@@ -25,7 +24,6 @@ function Index() {
 
   const fleeClick = () => {
     console.log("flee clicked");
-    firebase.analytics().logEvent("Flee_Clicked");
   };
 
   return (

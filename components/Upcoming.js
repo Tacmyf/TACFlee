@@ -60,7 +60,12 @@ function Upcoming(props) {
       >
         2020
       </Text>
-      <Box w="100%" mt={[6, 8, 12, 12]} px={0} pb={["6rem", "6rem", "6rem", "8rem"]}>
+      <Box
+        w="100%"
+        mt={[6, 8, 12, 12]}
+        px={0}
+        pb={["6rem", "6rem", "6rem", "8rem"]}
+      >
         <Card min={ministry}></Card>
       </Box>
     </>
