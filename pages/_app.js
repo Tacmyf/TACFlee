@@ -66,6 +66,15 @@ function App({ Component, pageProps }) {
           <title>Flee</title>
           <link rel="shortcut icon" href="./ico/icon-192x192.png" />
           <link rel="manifest" href="./manifest.json" />
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-ET3VV11Y1F"
+          ></script>
+          <script>
+            window.dataLayer = window.dataLayer || []; function gtag()
+            {dataLayer.push(arguments)}
+            gtag('js', new Date()); gtag('config', 'G-ET3VV11Y1F');
+          </script>
         </Head>
         <Component {...pageProps} lessons={lessons} />
       </ColorModeProvider>
