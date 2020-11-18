@@ -5,9 +5,6 @@ import {
   useColorMode,
   useColorModeValue,
   IconButton,
-  Center,
-  Container,
-  Wrap,
 } from "@chakra-ui/core";
 import { IoMdMoon, IoMdSunny } from "react-icons/io";
 import Link from "next/link";

@@ -1,22 +1,10 @@
 import React, { useState, useEffect } from "react";
-import {
-  Center,
-  Heading,
-  useColorMode,
-  useColorModeValue,
-  Text,
-  Box,
-} from "@chakra-ui/core";
+import { Center, Heading, useColorModeValue, Text, Box } from "@chakra-ui/core";
 import Card from "../components/Card";
 import firebase from "../firebase/firebase";
 import Spinner from "../components/Spinner";
 
 function Upcoming(props) {
-  const { colorMode, toggleColorMode } = useColorMode();
-
-  const bg = useColorModeValue("#00102A", "#F8F8F8");
-  const color = useColorModeValue("#F8F8F8", "#00102A");
-  const btn = "#304FFF";
   const sbtn = useColorModeValue("#F8F8F8", "#304FFF");
   const [ministry, setMinistry] = useState([]);
   const [loading, setLoading] = useState(false);

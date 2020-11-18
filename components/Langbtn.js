@@ -1,5 +1,4 @@
 import { Box, Center, Text } from "@chakra-ui/core";
-import Link from "next/link";
 
 function Langbtn(props) {
   const eng = <Text fontFamily="heading">அ</Text>;

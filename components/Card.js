@@ -1,17 +1,8 @@
-import {
-  Box,
-  Text,
-  Center,
-  useColorMode,
-  useColorModeValue,
-} from "@chakra-ui/core";
+import { Box, Text, Center, useColorModeValue } from "@chakra-ui/core";
 
 function Card(props) {
-  const { colorMode, toggleColorMode } = useColorMode();
   const bg = useColorModeValue("#00102A", "#F8F8F8");
   const color = useColorModeValue("#F8F8F8", "#00102A");
-  const btn = "#304FFF";
-  const sbtn = useColorModeValue("#F8F8F8", "#304FFF");
   return (
     <>
       {props.min.map((min, id) => (

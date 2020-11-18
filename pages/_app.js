@@ -5,7 +5,6 @@ import { theme } from "@chakra-ui/theme";
 import firebase from "../firebase/firebase";
 import { useState, useEffect } from "react";
 import Spinner from "../components/Spinner";
-import ReactGA from "react-ga";
 import "../styles/style.css";
 
 const customTheme = {
@@ -31,16 +30,10 @@ const customTheme = {
   },
 };
 
-function initializeReactGA() {
-  ReactGA.initialize("G-E93FDQV62E");
-  ReactGA.pageview("/");
-}
-
 function App({ Component, pageProps }) {
   console.log("Hello from APP");
   const [lessons, setLessons] = useState([]);
   const [loading, setLoading] = useState(false);
-  initializeReactGA();
   const ref = firebase.firestore().collection("lessons");
   function getLesson() {
     setLoading(true);
@@ -63,7 +56,6 @@ function App({ Component, pageProps }) {
     <ChakraProvider theme={customTheme}>
       <ColorModeProvider>
         <Head>
-          <title>Flee</title>
           <link rel="shortcut icon" href="./ico/icon-192x192.png" />
           <link rel="manifest" href="./manifest.json" />
         </Head>

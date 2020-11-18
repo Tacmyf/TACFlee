@@ -1,19 +1,7 @@
-const {
-  AspectRatio,
-  Box,
-  useColorMode,
-  useColorModeValue,
-  Text,
-  Center,
-  Heading,
-} = require("@chakra-ui/core");
+const { AspectRatio, Box, Text, Center, Heading } = require("@chakra-ui/core");
 
 function Content(props) {
-  const { colorMode, toggleColorMode } = useColorMode();
-  const bg = useColorModeValue("#00102A", "#F8F8F8");
-  const color = useColorModeValue("#F8F8F8", "#00102A");
   const btn = "#304FFF";
-  const sbtn = useColorModeValue("#F8F8F8", "#304FFF");
   const { ans, showAns, createMarkup, conv } = props;
 
   const pdf = "./" + props.article.slug + ".pdf";
