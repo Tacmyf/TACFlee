@@ -32,7 +32,7 @@ function Index() {
             __html: `window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-          
+            gtag('set', {'user_id': 'sessuid-2'});
             gtag('config', 'G-ET3VV11Y1F');`,
           }}
         />
