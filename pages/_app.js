@@ -76,6 +76,8 @@ function App({ Component, pageProps }) {
       <ColorModeProvider>
         <Head>
           <link rel="shortcut icon" href="./ico/icon-192x192.png" />
+          <link rel="apple-touch-icon" href="./ico/icon-192x192.png"></link>
+          <meta name="theme-color" content="#F8F8F8" />
           <link rel="manifest" href="./manifest.json" />
         </Head>
         <Component {...pageProps} lessons={lessons} />
