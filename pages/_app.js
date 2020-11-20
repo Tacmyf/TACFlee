@@ -60,6 +60,10 @@ function App({ Component, pageProps }) {
           <link rel="shortcut icon" href="./ico/icon-192x192.png" />
           <link rel="apple-touch-icon" href="/example.png"></link>
           <meta name="theme-color" content="#F8F8F8" />
+          <meta
+            name="viewport"
+            content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover"
+          />
           <link rel="manifest" href="./manifest.json" />
         </Head>
         <Component {...pageProps} lessons={lessons} />
