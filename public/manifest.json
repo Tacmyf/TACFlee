@@ -2,7 +2,7 @@
   "theme_color": "#304fff",
   "background_color": "#f8f8f8",
   "display": "fullscreen",
-  "scope": "https://tacmyf.com/",
+  "scope": "/",
   "start_url": "https://tacmyf.com/",
   "app_name": "Flee TMC",
   "short_name": "Flee",
