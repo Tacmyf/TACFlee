@@ -36,15 +36,6 @@ function Index() {
             gtag('config', 'G-ET3VV11Y1F');`,
           }}
         />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `if('serviceWorker' in navigator) {
-            navigator.serviceWorker
-                     .register('./sw.js')
-                     .then(function() { console.log("Service Worker Registered"); });
-          }`,
-          }}
-        ></script>
       </Head>
       <Layout>
         <Center mt={[0, 0, 14, 16]}>

@@ -34,6 +34,25 @@ function App({ Component, pageProps }) {
   console.log("Hello from APP");
   const [lessons, setLessons] = useState([]);
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", function () {
+        navigator.serviceWorker.register("/sw.js").then(
+          function (registration) {
+            console.log(
+              "Service Worker registration successful with scope: ",
+              registration.scope
+            );
+          },
+          function (err) {
+            console.log("Service Worker registration failed: ", err);
+          }
+        );
+      });
+    }
+  }, []);
+
   const ref = firebase.firestore().collection("lessons");
   function getLesson() {
     setLoading(true);
