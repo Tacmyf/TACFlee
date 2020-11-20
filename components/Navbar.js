@@ -28,7 +28,11 @@ function Navbar() {
   }
 
   return (
-    <div style={{ paddingTop: "5px" }}>
+    <div
+      style={{
+        paddingTop: "5px",
+      }}
+    >
       <Flex
         as="nav"
         align="center"

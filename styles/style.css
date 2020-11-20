@@ -24,6 +24,11 @@
   }
 }
 
+.navbar {
+  padding-top: 20px;
+  padding-top: env(safe-area-inset-bottom, 2px);
+}
+
 .loader {
   height: 90vh;
   position: relative;
