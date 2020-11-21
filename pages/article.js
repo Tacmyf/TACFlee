@@ -29,17 +29,19 @@ function Article(props) {
     getLesson();
   }, {});
 
-  if (loading) {
-    return <Spinner></Spinner>;
-  }
-
   return (
     <>
       <Layout>
-        {article ? (
-          <Articleempty article={article}></Articleempty>
+        {loading ? (
+          <Spinner />
         ) : (
-          <Undercons></Undercons>
+          <>
+            {article ? (
+              <Articleempty article={article}></Articleempty>
+            ) : (
+              <Undercons></Undercons>
+            )}
+          </>
         )}
       </Layout>
     </>

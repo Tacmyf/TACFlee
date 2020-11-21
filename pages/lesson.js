@@ -54,6 +54,7 @@ function Lesson(props) {
             >
               <Boximage
                 key={id}
+                id={id}
                 link={lesson.slug}
                 imageUrl={lesson.coverimg}
                 title={lesson.lessontitle}
