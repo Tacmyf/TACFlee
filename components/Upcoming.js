@@ -46,7 +46,7 @@ function Upcoming(props) {
         fontWeight={600}
         mt={[2, 4, 8, 10]}
       >
-        2020
+        2021
       </Text>
       <Box
         w="100%"

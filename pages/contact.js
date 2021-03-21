@@ -102,7 +102,7 @@ function Contact() {
                       mt={2}
                       color={sbtn}
                     >
-                      Mr. Josiah Inbaraj
+                      Mr. Alfred Samuel
                     </Heading>
                     <Heading
                       fontSize="xl"
@@ -112,7 +112,7 @@ function Contact() {
                       mt={2}
                       color={sbtn}
                     >
-                      josiahinbaraj20@gmail.com
+                      alfredsamuel5161@gmail.com
                     </Heading>
                   </Flex>
                   <Box>
