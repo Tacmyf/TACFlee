@@ -30,7 +30,9 @@ function Navbar() {
   return (
     <div
       style={{
-        paddingTop: "5px",
+        position: "fixed",
+        width: "100vw",
+        zIndex: "100",
       }}
     >
       <Flex
@@ -38,7 +40,8 @@ function Navbar() {
         align="center"
         justify="space-between"
         wrap="wrap"
-        py="2"
+        pb="2"
+        pt={4}
         bg={bg}
         color={color}
       >

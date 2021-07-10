@@ -7,7 +7,7 @@ function Layout(props) {
   return (
     <Box bg={bg} color={color} minHeight="100vh">
       <Navbar></Navbar>
-      <Center>
+      <Center pt={[16, 16, 12, 12]}>
         <Box w={["90%", "90%", "70%", "80%"]}>{props.children}</Box>
       </Center>
     </Box>
