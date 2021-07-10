@@ -43,7 +43,8 @@ function Pandemicadvice() {
       name: "Sis Shoby",
       contact: "010-2121655",
       email: `shobanachandran@gmail.com`,
-      image: null,
+      image:
+        "https://firebasestorage.googleapis.com/v0/b/flee-1866b.appspot.com/o/p3.jpg?alt=media&token=fde5e8f9-75c9-49ae-8622-202ed23f4468",
     },
   ];
 
