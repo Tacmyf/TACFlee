@@ -9,7 +9,7 @@ function Navscreen(props) {
   );
 
   return (
-    <Center minH="100vh" position="fixed" w="100vw" bg={navclr}>
+    <Center zIndex={100} minH="100vh" position="fixed" w="100vw" bg={navclr}>
       <Box justify="center" mb="200px">
         <VStack>
           <Linkpage
