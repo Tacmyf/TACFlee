@@ -61,7 +61,7 @@ function Pandemicadvice() {
         >
           During this pandemic, we know that many are going through difficult
           times, depression, suicidal thoughts and other hardships. We would
-          like to help you. TAC MYF has assigned counsellors to help you. If you
+          like to help you. TAC MYF has assigned counselors to help you. If you
           need any assistance, someone to talk or someone to pray for you,
           please do not hesitate to call us. We are always ready to listen to
           you and pray with you or offer assistance.
