@@ -1,8 +1,11 @@
 import Undercons from "../components/Undercons";
+import Pandemicadvice from "../components/Pandemicadvice";
 import Layout from "../components/Layout";
 import Head from "next/head";
 
 function Counselling() {
+  const contentCheck = true;
+
   return (
     <>
       <Head>
@@ -21,9 +24,7 @@ function Counselling() {
           }}
         />
       </Head>
-      <Layout>
-        <Undercons></Undercons>
-      </Layout>
+      <Layout>{contentCheck ? <Pandemicadvice /> : <Undercons />}</Layout>
     </>
   );
 }
