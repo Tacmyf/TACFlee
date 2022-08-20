@@ -4,6 +4,7 @@ import { ChakraProvider, CSSReset, ColorModeProvider } from "@chakra-ui/core";
 import { theme } from "@chakra-ui/theme";
 import firebase from "../firebase/firebase";
 import { useState, useEffect } from "react";
+import Layout from "../components/Layout";
 import Spinner from "../components/Spinner";
 import "../styles/style.css";
 
@@ -62,7 +63,9 @@ function App({ Component, pageProps }) {
           <meta name="theme-color" content="#F8F8F8" />
           <link rel="manifest" href="./manifest.json" />
         </Head>
-        <Component {...pageProps} lessons={lessons} />
+        <Layout>
+          <Component {...pageProps} lessons={lessons} />
+        </Layout>
       </ColorModeProvider>
     </ChakraProvider>
   );
