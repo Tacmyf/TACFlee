@@ -73,7 +73,7 @@ function Index() {
                     pb={1}
                   >
                     <Center>
-                      <Text>FLEE</Text>
+                      <Text>Explore</Text>
                     </Center>
                   </Box>
                 </Link>
