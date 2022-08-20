@@ -37,7 +37,7 @@ function Index() {
           }}
         />
       </Head>
-      <Layout>
+      <>
         <Center mt={[0, 0, 14, 16]}>
           <Box
             display={{ base: "block", sm: "block", md: "block", lg: "flex" }}
@@ -89,7 +89,7 @@ function Index() {
             </Box>
           </Box>
         </Center>
-      </Layout>
+      </>
     </>
   );
 }

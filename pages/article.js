@@ -31,19 +31,17 @@ function Article(props) {
 
   return (
     <>
-      <Layout>
-        {loading ? (
-          <Spinner />
-        ) : (
-          <>
-            {article ? (
-              <Articleempty article={article}></Articleempty>
-            ) : (
-              <Undercons></Undercons>
-            )}
-          </>
-        )}
-      </Layout>
+      {loading ? (
+        <Spinner />
+      ) : (
+        <>
+          {article ? (
+            <Articleempty article={article}></Articleempty>
+          ) : (
+            <Undercons></Undercons>
+          )}
+        </>
+      )}
     </>
   );
 }

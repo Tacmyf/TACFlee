@@ -24,7 +24,7 @@ function Counselling() {
           }}
         />
       </Head>
-      <Layout>{contentCheck ? <Pandemicadvice /> : <Undercons />}</Layout>
+      <>{contentCheck ? <Pandemicadvice /> : <Undercons />}</>
     </>
   );
 }

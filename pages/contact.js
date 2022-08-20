@@ -32,7 +32,7 @@ function Contact() {
           }}
         />
       </Head>
-      <Layout>
+      <>
         <Center>
           <Heading
             fontWeight="xbold"
@@ -53,7 +53,6 @@ function Contact() {
                 <Box>
                   <Flex display="block">
                     <Heading
-                      fontSize="2xl"
                       fontWeight="bold"
                       textAlign={["center", "center", "center", "left"]}
                       fontSize={["2xl", "2xl", "4xl", "4xl"]}
@@ -63,7 +62,6 @@ function Contact() {
                       TAC Director of Youth Work
                     </Heading>
                     <Heading
-                      fontSize="2xl"
                       fontWeight="semi"
                       textAlign={["center", "center", "center", "left"]}
                       fontSize={["2xl", "2xl", "4xl", "4xl"]}
@@ -73,7 +71,6 @@ function Contact() {
                       Rev Timothy Raj
                     </Heading>
                     <Heading
-                      fontSize="xl"
                       fontWeight="semi"
                       textAlign={["center", "center", "center", "left"]}
                       fontSize={["xl", "xl", "2xl", "2xl"]}
@@ -85,7 +82,6 @@ function Contact() {
                   </Flex>
                   <Flex display="block">
                     <Heading
-                      fontSize="2xl"
                       fontWeight="bold"
                       textAlign={["center", "center", "center", "left"]}
                       fontSize={["2xl", "2xl", "4xl", "4xl"]}
@@ -95,7 +91,6 @@ function Contact() {
                       TAC Methodist Youth Fellowship President
                     </Heading>
                     <Heading
-                      fontSize="2xl"
                       fontWeight="semi"
                       textAlign={["center", "center", "center", "left"]}
                       fontSize={["2xl", "2xl", "4xl", "4xl"]}
@@ -105,7 +100,6 @@ function Contact() {
                       Mr. Alfred Samuel
                     </Heading>
                     <Heading
-                      fontSize="xl"
                       fontWeight="semi"
                       textAlign={["center", "center", "center", "left"]}
                       fontSize={["xl", "xl", "2xl", "2xl"]}
@@ -151,7 +145,7 @@ function Contact() {
             </Box>
           </Box>
         </Center>
-      </Layout>
+      </>
     </>
   );
 }

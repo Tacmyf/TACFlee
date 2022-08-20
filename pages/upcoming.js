@@ -21,9 +21,9 @@ function UpcomingEvent() {
           }}
         />
       </Head>
-      <Layout>
+      <>
         <Upcoming></Upcoming>
-      </Layout>
+      </>
     </>
   );
 }

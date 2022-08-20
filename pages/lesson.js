@@ -35,7 +35,7 @@ function Lesson(props) {
           }}
         />
       </Head>
-      <Layout>
+      <>
         <Center>
           <Heading
             fontWeight="xbold"
@@ -63,7 +63,7 @@ function Lesson(props) {
             </a>
           ))}
         </HStack>
-      </Layout>
+      </>
     </>
   );
 }

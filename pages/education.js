@@ -21,9 +21,9 @@ function Education() {
           }}
         />
       </Head>
-      <Layout>
+      <>
         <Undercons/>
-      </Layout>
+      </>
     </>
   );
 }
