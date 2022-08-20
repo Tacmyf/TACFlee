@@ -2,11 +2,11 @@ import Upcoming from "../components/Upcoming";
 import Layout from "../components/Layout";
 import Head from "next/head";
 
-function Ministry() {
+function UpcomingEvent() {
   return (
     <>
       <Head>
-        <title>Flee - Ministry</title>
+        <title>Flee - Upcoming</title>
         <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-ET3VV11Y1F"
@@ -28,4 +28,4 @@ function Ministry() {
   );
 }
 
-export default Ministry;
+export default UpcomingEvent;
