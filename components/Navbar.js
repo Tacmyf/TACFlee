@@ -17,11 +17,10 @@ function Navbar() {
   const { colorMode, toggleColorMode } = useColorMode();
   const bg = useColorModeValue("#00102A", "#F8F8F8");
   const color = useColorModeValue("#F8F8F8", "#00102A");
-  const logo = useColorModeValue(
-    "./assets/logo-white.png",
-    "./assets/logo.png"
-  );
   const btn = "#304FFF";
+
+  const whiteLogo = "./assets/logo-white.png"
+  const darkLogo = "./assets/logo.png"
 
   function opennav() {
     setMenu(!menu);
@@ -59,7 +58,10 @@ function Navbar() {
           <Box>
             <Link href="/">
               <Box boxSize="60px">
-                <Image src={logo} alt="Flee Logo" cursor="pointer" />
+                <Image 
+                  src={colorMode === "light" ? whiteLogo : darkLogo} 
+                  alt="Flee Logo"
+                  cursor="pointer" />
               </Box>
             </Link>
           </Box>
