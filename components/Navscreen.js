@@ -27,8 +27,8 @@ function Navscreen(props) {
             setMenu={props.setMenu}
           ></Linkpage>
           <Linkpage
-            page={"/ministry"}
-            name={"Ministry"}
+            page={"/upcoming"}
+            name={"Upcoming"}
             color={sbtn}
             menu={props.menu}
             setMenu={props.setMenu}
@@ -36,6 +36,13 @@ function Navscreen(props) {
           <Linkpage
             page={"/counselling"}
             name={"Counselling"}
+            color={sbtn}
+            menu={props.menu}
+            setMenu={props.setMenu}
+          ></Linkpage>
+          <Linkpage
+            page={"/education"}
+            name={"Education"}
             color={sbtn}
             menu={props.menu}
             setMenu={props.setMenu}

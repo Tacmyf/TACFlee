@@ -3,6 +3,9 @@ import { Box, Text, Center, useColorModeValue } from "@chakra-ui/core";
 function Card(props) {
   const bg = useColorModeValue("#00102A", "#F8F8F8");
   const color = useColorModeValue("#F8F8F8", "#00102A");
+
+  const monthNames = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
+
   return (
     <>
       {props.min.map((min, id) => (
@@ -36,14 +39,13 @@ function Card(props) {
                     fontSize={"2xl"}
                     fontWeight={800}
                   >
-                    {min.month}
+                    {monthNames[min.month]}
                   </Text>
                 </Box>
               </Center>
             </Box>
             <Box
               py={"0.325em"}
-              bg="turquoise"
               w="100%"
               pl={[2, 2, 10, 12]}
               bg={color}
