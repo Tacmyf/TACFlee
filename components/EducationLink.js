@@ -26,7 +26,7 @@ function EducationLink(props) {
 					{'TAC MYF EDUCATION FUND APPLICATION'}
 				</Text>
 				<Center>
-					<Box w={'80%'}>
+					<Box w={['90%', '80%', '80%', '80%']}>
 						<Text
 							color={sbtn}
 							lineHeight={'1em'}
@@ -48,8 +48,8 @@ function EducationLink(props) {
 							onClick={() => console.log('Clicked')}
 							fontFamily="Poppins"
 							cursor="pointer"
-							fontWeight="bold"
-							fontSize="lg"
+							fontWeight="regular"
+							fontSize="md"
 							_hover={{ bg: btn }}
 							bg={btn}
 							color="#F8F8F8"
