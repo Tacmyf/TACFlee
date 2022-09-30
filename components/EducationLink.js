@@ -1,36 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Center, Heading, useColorModeValue, Text, Box, Link } from '@chakra-ui/core';
-import Card from './Card';
-import firebase from '../firebase/firebase';
 import Spinner from './Spinner';
 
 function EducationLink(props) {
 	const sbtn = useColorModeValue('#F8F8F8', '#304FFF');
 	const btn = '#304FFF';
-	const [ministry, setMinistry] = useState([]);
-	const [loading, setLoading] = useState(false);
-	const ref = firebase.firestore().collection('ministry');
-	function getMinistry() {
-		setLoading(true);
-		ref.get().then((item) => {
-			const items = item.docs
-				.map((doc) => doc.data())
-				.sort((a, b) => a.date - b.date)
-				.sort((a, b) => a.month - b.month);
-			setMinistry(items);
-			setLoading(false);
-		});
-	}
 
-	useEffect(() => {
-		getMinistry();
-	}, []);
-
-	const currentYear = new Date().getFullYear();
-
-	if (loading) {
-		return <Spinner></Spinner>;
-	}
 	return (
 		<>
 			<Center>
