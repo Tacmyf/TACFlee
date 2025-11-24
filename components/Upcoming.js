@@ -1,21 +1,31 @@
 import React, { useState, useEffect } from 'react';
-import { Center, Heading, useColorModeValue, Text, Box } from '@chakra-ui/core';
+import { Center, Heading, useColorModeValue, Text, Box } from '@chakra-ui/react';
 import Card from '../components/Card';
-import firebase from '../firebase/firebase';
+import { db } from '../firebase/firebase';
+import { collection, getDocs } from 'firebase/firestore';
 import Spinner from '../components/Spinner';
 
 function Upcoming(props) {
 	const sbtn = useColorModeValue('#F8F8F8', '#304FFF');
 	const [ministry, setMinistry] = useState([]);
 	const [loading, setLoading] = useState(false);
-	const ref = firebase.firestore().collection('ministry');
 	function getMinistry() {
 		setLoading(true);
-		ref.get().then((item) => {
-			const items = item.docs.map((doc) => doc.data()).sort((a, b) => a.date - b.date).sort((a, b) => a.month - b.month);
-			setMinistry(items);
-			setLoading(false);
-		});
+		const ministryRef = collection(db, 'ministry');
+		getDocs(ministryRef)
+			.then((querySnapshot) => {
+				const items = querySnapshot.docs
+					.map((doc) => doc.data())
+					.sort((a, b) => a.date - b.date)
+					.sort((a, b) => a.month - b.month);
+				setMinistry(items);
+				setLoading(false);
+			})
+			.catch((error) => {
+				console.error('Error fetching ministry:', error);
+				setMinistry([]);
+				setLoading(false);
+			});
 	}
 
 	useEffect(() => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Center, Heading, useColorModeValue, Text, Box, Link } from '@chakra-ui/core';
+import { Center, Heading, useColorModeValue, Text, Box, Link } from '@chakra-ui/react';
 import Spinner from './Spinner';
 
 function EducationLink(props) {
@@ -93,7 +93,7 @@ function EducationLink(props) {
 				</Center>
 				<Center>
 					<Box
-						onClick={() => console.log('Clicked')}
+						// onClick={() => console.log('Clicked')}
 						fontFamily="Poppins"
 						cursor="pointer"
 						fontWeight="regular"

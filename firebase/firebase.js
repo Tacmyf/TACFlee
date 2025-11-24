@@ -1,7 +1,7 @@
-import firebase from 'firebase/app';
-import 'firebase/firestore';
+import { initializeApp, getApps } from 'firebase/app';
+import { getFirestore } from 'firebase/firestore';
 
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// For Firebase JS SDK v9+ (modular SDK)
 const firebaseConfig = {
 	apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
 	authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
@@ -13,9 +13,9 @@ const firebaseConfig = {
 	measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
 };
 
-if (!firebase.apps.length) {
-	console.log('=================> wokringgg');
-	firebase.initializeApp(firebaseConfig);
-}
+// Initialize Firebase
+const app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0];
+const db = getFirestore(app);
 
-export default firebase;
+export { db };
+export default app;
